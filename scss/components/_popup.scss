@@ -1,0 +1,118 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color-black, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+
+  // IN CASE YOU WANT TO BLUR BACKGROUND OF POP-UP BUT IS JAM OR EXCLUDE THE SMOTHNESS OF ANIMATIONS AND WEB PAGE.
+
+  // @supports (backdrop-filter: blur()) or (-webkit-backdrop-filter: blur()) {
+  //   -wwebkit-backdrop-filter: blur(5px);
+  //   backdrop-filter: blur(5px);
+  //   background-color: rgba($color-black, .7);
+  // }
+
+  &__section {
+    &--left {
+      width: 33.333%;
+      display: table-cell;
+
+      @include media(tab-land) {
+        width: 0%;
+        display: none;
+      }
+    }
+
+    &--right {
+      width: 67.6667%;
+      padding: 4rem;
+      display: table-cell;
+      vertical-align: middle;
+
+      @include media(tab-land) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: $default-font-size;
+    color: $color-gray;
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 1px solid $color-gray-light;
+    hyphens: auto;
+
+    @include media(tab-land) {
+      column-gap: 5rem;
+    }
+
+    @include media(tab-port) {
+      width: 85%;
+      column-count: 1;
+    }
+
+    @include media(small-tab) {
+      width: 100%;
+      column-count: 1;
+    }
+  }
+
+  // POPUP OPEN STATES
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content-box {
+    @include center-hr-vt;
+    width: 80%;
+    height: 40rem;
+    background-color: $color-white;
+    display: table;
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s 0.2s ease;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  &:target &__content-box {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  // POPUP CLOSE BUTTON
+
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: inline-block;
+      font-size: 3rem;
+      color: $color-gray;
+      line-height: 1;
+      text-decoration: none;
+      transition: all 0.1s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
+}

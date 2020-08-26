@@ -1,0 +1,67 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin center-hr-vt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// MEDIA QUIRIES MANAGER
+
+// Small-Phone -- >280px -- 17.5em
+// Phone -- 600px -- <37.5em
+// Tab-Portrait -- <900px -- 56.25em
+// Tab-Landscape -- <1200px -- 75em
+// Desktop -- >1200px -- 75em
+// Large-Desktop -- >1800px -- 112.5em
+
+
+// BREAKPOINTS ARGUMENTS CHOICES
+
+// -- small-phone
+// -- phone
+// -- tab-port
+// -- tab-land
+// -- desktop
+// -- large desktop
+
+// ORDER OF RESPONDING : Base + Typography > Genral Layout + Grid > Page Layout > Components
+
+@mixin media($breakpoint) {
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content}; // max 75em = <1200px for Tab-Landscape
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content}; // max 56.25em = <900px for Tab-Portrait
+  }
+
+  @if $breakpoint == small-tab {
+    @media only screen and (max-width: 37.5em) { @content}; // max 37.5em = <600px for Small-tab
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 30em) { @content}; // max 30em = <480px for Small-Phones
+  }
+
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 22.5em) { @content}; // max 22.5em = <360px for Small-Phones
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 75.0625em) { @content}; // min 75em = >1200px for Desktops
+  }
+
+  @if $breakpoint == large-desktop {
+    @media only screen and (min-width: 112.5em) { @content}; // min 112.5em = >1800px for large-Desktops
+  }
+}

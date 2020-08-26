@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  backface-visibility: hidden;
+
+  @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  @include media(tab-land) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  @include media(small-tab) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    & .header__logo {
+      width: 6rem;
+    }
+  }
+
+  &__text-box {
+    @include center-hr-vt;
+    text-align: center;
+  }
+}

@@ -1,0 +1,76 @@
+.story {
+  height: auto;
+  width: 75%;
+  padding: 5rem;
+  padding-left: 7rem;
+  margin: 0 auto;
+  font-size: $default-font-size;
+  background-color: rgba($color-white, .5);
+  border-radius: 3px;
+  box-shadow: 0 2rem 2rem rgba($color-black, .2);
+  transition: all .3s ease;
+  transform: skewX(-12deg);
+
+  @include media(small-tab) {
+    width: 90%;
+    padding: 3rem;
+    padding-left: 5rem;
+    transform: skewX(0deg);
+  }
+
+  &__shape {
+    height: 10rem;
+    width: 10rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    @include clearfix;
+
+    @include media(small-tab) {
+      transform: translateX(-2rem) skewX(0deg);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    transition: all .5s;
+    transform: translateX(-2rem) scale(1.2);
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+    text-align: left;
+
+    @include media(small-tab) {
+      transform: skewX(0deg);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: $default-font-size;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s ease;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-2rem) scale(1);
+    filter: blur(3px) brightness(70%);
+  }
+}
