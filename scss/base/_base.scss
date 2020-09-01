@@ -27,7 +27,6 @@ body {
   line-height: 1.5;
   padding: 1.5rem;
   box-sizing: border-box;
-
   @include media(tab-port) {padding: 0;}
 }
 
