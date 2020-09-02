@@ -108,7 +108,8 @@
       rgba($color-white, .8) 50%,
       transparent 50%
     ),
-    url(../img/nat-10.jpg);
+    url(../img/pak-7.webp), 
+    url(../img/pak-7.jpg);
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1rem 2rem rgba($color-black, .2);
@@ -120,7 +121,8 @@
       rgba($color-white, .8) 70%,
       transparent 30%
     ),
-    url(../img/nat-10.jpg);
+    url(../img/pak-7.webp), 
+    url(../img/pak-7.jpg);
   }
 
   @include media(tab-port) {
@@ -133,7 +135,9 @@
       rgba($color-white, .8) 100%,
       transparent 0%
     ),
-    url(../img/nat-10.jpg);
+    url(../img/pak-5.webp), 
+    url(../img/pak-5.jpg);
+    background-position: bottom;
   }
 
   &__form {

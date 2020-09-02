@@ -59,7 +59,7 @@
     background-size: cover;
     height: 23rem;
     width: 100%;
-    background-blend-mode: screen;
+    background-blend-mode: multiply;
     overflow: hidden;
 
     @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
@@ -74,7 +74,8 @@
           $color-secondary-light,
           $color-secondary-dark
         ),
-        url(../img/nat-5.jpg);
+        url(../img/pak-1.webp), url(../img/pak-1.jpg);
+        background-position: bottom;
     }
 
     &--2 {
@@ -83,7 +84,7 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url(../img/nat-6.jpg);
+        url(../img/pak-3.webp), url(../img/pak-3.jpg);
     }
 
     &--3 {
@@ -92,7 +93,7 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url(../img/nat-7.jpg);
+        url(../img/pak-2.webp), url(../img/pak-2.jpg);
     }
   }
 
