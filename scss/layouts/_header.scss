@@ -3,12 +3,12 @@
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      rgba($color-primary-light, 0.75),
+      rgba($color-primary-dark, 0.75)
     ),
-    url(../img/hero-small.jpg);
+    url(../img/pak-13.webp);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   position: relative;
   backface-visibility: hidden;
 
@@ -23,7 +23,7 @@
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)
       ),
-      url(../img/hero.jpg);
+      url(../img/pak-13.jpg);
   }
 
   @include media(tab-land) {

@@ -90,10 +90,12 @@
     &--3 {
       background-image: linear-gradient(
           to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
+          rgba($color-tertiary-light, .5),
+          rgba($color-tertiary-dark, .5)
         ),
         url(../img/pak-2.webp), url(../img/pak-2.jpg);
+        background-blend-mode: normal;
+        filter: contrast(170%);
     }
   }
 

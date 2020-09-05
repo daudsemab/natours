@@ -105,11 +105,11 @@
   width: 100%;
   background-image: linear-gradient(
       105deg,
-      rgba($color-white, .8) 50%,
+      rgba($color-gray-light-2, .8) 50%,
       transparent 50%
     ),
-    url(../img/pak-7.webp), 
-    url(../img/pak-7.jpg);
+    url(../img/pak-14.webp), 
+    url(../img/pak-14.jpg);
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1rem 2rem rgba($color-black, .2);
@@ -118,11 +118,11 @@
     height: 40rem;
     background-image: linear-gradient(
       105deg,
-      rgba($color-white, .8) 70%,
+      rgba($color-gray-light-2, .8) 70%,
       transparent 30%
     ),
-    url(../img/pak-7.webp), 
-    url(../img/pak-7.jpg);
+    url(../img/pak-14.webp), 
+    url(../img/pak-14.jpg);
   }
 
   @include media(tab-port) {
