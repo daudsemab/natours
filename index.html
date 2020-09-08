@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -9,12 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <div class="navigation" role="navigation">
+    <!-- ****** Section Navigation Start ****** -->
+    <section class="navigation" role="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
       <label for="navi-toggle" class="navigation__button">
         <span class="navigation__icon"></span>
@@ -39,8 +42,10 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </section>
+    <!-- END SECTION NAVIGATION -->
 
+    <!-- ****** Section Header Start ****** -->
     <header class="header">
       <div class="header__logo-box">
         <img src="./img/logo-white.png" alt="" class="header__logo" />
@@ -53,8 +58,10 @@
         <button class="btn btn--white btn--animated">Make Travel Today</button>
       </div>
     </header>
+    <!-- END HEADER SECTION -->
 
     <main>
+      <!-- ****** Section ABOUT Start ****** -->
       <section class="section-about">
         <div class="u-center-text">
           <h2 class="heading-secondary">
@@ -86,12 +93,12 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
-              srcset="img/pak-12.webp 300w, img/pak-12.jpg 1000w"
-              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-              alt="Photo-2"
-              class="composition__photo composition__photo--p1"
-              src="./img/pak-12.jpg"
-            />
+                srcset="img/pak-12.webp 300w, img/pak-12.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo-2"
+                class="composition__photo composition__photo--p1"
+                src="./img/pak-12.jpg"
+              />
               <img
                 srcset="img/pak-9.webp 300w, img/pak-9.jpg 1000w"
                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
@@ -100,17 +107,19 @@
                 src="./img/pak-9.jpg"
               />
               <img
-              srcset="img/pak-11.webp 300w, img/pak-11.jpg 1000w"
-              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-              alt="Photo-1"
-              class="composition__photo composition__photo--p3"
-              src="./pak-11.jpg.jpg"
-            />
+                srcset="img/pak-11.webp 300w, img/pak-11.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo-1"
+                class="composition__photo composition__photo--p3"
+                src="./pak-11.jpg.jpg"
+              />
             </div>
           </div>
         </div>
       </section>
+      <!-- END ABOUT SECTION -->
 
+      <!-- ****** Section FEATURES Start ****** -->
       <section class="section-features">
         <div class="row">
           <div class="col-1-of-4">
@@ -163,7 +172,9 @@
           </div>
         </div>
       </section>
+      <!-- END FEATURES SECTION -->
 
+      <!-- ****** Section TOURS Start ****** -->
       <section class="section-tours">
         <div class="u-center-text">
           <h2 class="heading-secondary" id="booking-card-section">
@@ -266,7 +277,9 @@
           <a href="#" class="btn-text">Discover all Tours &rarr;</a>
         </div>
       </section>
+      <!-- END TOURS SECTION -->
 
+      <!-- ****** Section STORIES Start ****** -->
       <section class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
@@ -332,7 +345,9 @@
           <a href="#" class="btn-text">Read all stories &rarr;</a>
         </div>
       </section>
+      <!-- END STORIES SECTION -->
 
+      <!-- ****** Section BOOKING Start ****** -->
       <section class="section-booking">
         <div class="row">
           <div class="book">
@@ -393,8 +408,10 @@
           </div>
         </div>
       </section>
+      <!-- END BOOKING SECTION -->
     </main>
 
+    <!-- ****** Section FOOTER Start ****** -->
     <footer class="footer">
       <div class="footer__logo-box">
         <picture class="footer__logo">
@@ -445,8 +462,10 @@
         </div>
       </div>
     </footer>
+    <!-- END FOOTER SECTION -->
 
-    <div class="popup" id="booking-popup">
+    <!-- ****** Section POPUP Start ****** -->
+    <section class="popup" id="booking-popup">
       <div class="popup__content-box">
         <section class="popup__section--left">
           <img src="img/david0.jpg" alt="Fig.1" class="popup__img" />
@@ -472,6 +491,7 @@
           <button class="btn btn--green">Book Now!</button>
         </section>
       </div>
-    </div>
+    </section>
+    <!-- END POPUP SECTION -->
   </body>
 </html>
